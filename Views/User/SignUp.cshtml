@@ -33,6 +33,7 @@
             });
         }));
     </script>
+    
 </head>
 
 
@@ -54,7 +55,7 @@
             @Html.AntiForgeryToken();
             @Html.ValidationSummary(true);
 
-
+        
 
             <div class="form-group">
                 @Html.LabelFor(m => m.name)
@@ -70,7 +71,7 @@
 
             <div class="form-group">
                 @Html.LabelFor(m => m.password)
-                @Html.TextBoxFor(m => m.password, new { @placeholder = "password" ,type="password", @id = "password", @name = "password", @class = "form-control" })
+                @Html.TextBoxFor(m => m.password, new { @placeholder = "password" ,type="password", id = "password", @name = "password", @class = "form-control" })
                 @Html.ValidationMessageFor(m => m.password)
             </div>
 
@@ -112,7 +113,7 @@
 
                 <input type="password" class="form-control" placeholder="Password" name="password">
             </div>
-            @if (@ViewBag.Invalid == "Incorrect Identification")
+            @if (ViewBag.Invalid == "Incorrect Identification")
             {
                 <div><p style="color: white">Incorrect Email or password</p></div>
             }
